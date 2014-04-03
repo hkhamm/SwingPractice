@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 public class AddressBook extends JFrame {
 
     // Text Fields
-    private final JTextField firstNameField = new JTextField();
-    private final JTextField lastNameField = new JTextField();
-    private final JTextField streetField = new JTextField();
-    private final JTextField cityField = new JTextField();
-    private final JTextField zipField = new JTextField();
-    private final JTextField phoneField = new JTextField();
-    private final JTextField emailField = new JTextField();
+    private JTextField firstNameField;
+    private JTextField lastNameField;
+    private JTextField streetField;
+    private JTextField cityField;
+    private JTextField zipField;
+    private JTextField phoneField;
+    private JTextField emailField;
 
     public AddressBook() {
         // Window
@@ -37,6 +37,15 @@ public class AddressBook extends JFrame {
         JLabel zipLabel = new JLabel("Zip");
         JLabel phoneLabel = new JLabel("Phone");
         JLabel emailLabel = new JLabel("Email");
+        
+        // Text Fields
+        firstNameField = new JTextField();
+        lastNameField = new JTextField();
+        streetField = new JTextField();
+        cityField = new JTextField();
+        zipField = new JTextField();
+        phoneField = new JTextField();
+        emailField = new JTextField();
 
         // Buttons
         JButton save = new JButton("Save");
