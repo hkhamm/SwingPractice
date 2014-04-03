@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 
 public class AddressBook extends JFrame {
 
-    // Text Fields
     private JTextField firstNameField;
     private JTextField lastNameField;
     private JTextField streetField;
