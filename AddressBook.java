@@ -6,6 +6,15 @@ import java.awt.event.ActionListener;
 
 public class AddressBook extends JFrame {
 
+    // Text Fields
+    private final JTextField firstNameField = new JTextField();
+    private final JTextField lastNameField = new JTextField();
+    private final JTextField streetField = new JTextField();
+    private final JTextField cityField = new JTextField();
+    private final JTextField zipField = new JTextField();
+    private final JTextField phoneField = new JTextField();
+    private final JTextField emailField = new JTextField();
+
     public AddressBook() {
         // Window
         setTitle("Address Book");
@@ -29,33 +38,20 @@ public class AddressBook extends JFrame {
         JLabel phoneLabel = new JLabel("Phone");
         JLabel emailLabel = new JLabel("Email");
 
-        // Text Fields
-        final JTextField firstNameField = new JTextField();
-        final JTextField lastNameField = new JTextField();
-        final JTextField streetField = new JTextField();
-        final JTextField cityField = new JTextField();
-        final JTextField zipField = new JTextField();
-        final JTextField phoneField = new JTextField();
-        final JTextField emailField = new JTextField();
-
         // Buttons
         JButton save = new JButton("Save");
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
                 // TODO save field text to JSON file
+                clearFields();
+                JOptionPane.showMessageDialog(null, "Saved! (just kidding, nothing actually happened...)");
             }
         });
 
         JButton clear = new JButton("Clear");
         clear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
-                firstNameField.setText("");
-                lastNameField.setText("");
-                streetField.setText("");
-                cityField.setText("");
-                zipField.setText("");
-                phoneField.setText("");
-                emailField.setText("");
+                clearFields();
             }
         });
 
@@ -98,6 +94,16 @@ public class AddressBook extends JFrame {
         fieldPanel.add(emailField);
 
         setVisible(true);
+    }
+    
+    public void clearFields() {
+        firstNameField.setText("");
+        lastNameField.setText("");
+        streetField.setText("");
+        cityField.setText("");
+        zipField.setText("");
+        phoneField.setText("");
+        emailField.setText("");
     }
 
     public static void main(String[] args) {
