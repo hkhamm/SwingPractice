@@ -50,7 +50,6 @@ public class AddressBook extends JFrame {
         JButton save = new JButton("Save");
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
-                // TODO save field text to JSON file
                 clearFields();
                 JOptionPane.showMessageDialog(null, "Saved! (just kidding, nothing actually happened...)");
             }
