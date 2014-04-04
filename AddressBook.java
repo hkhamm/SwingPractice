@@ -104,7 +104,7 @@ public class AddressBook extends JFrame {
         setVisible(true);
     }
     
-    public void clearFields() {
+    private void clearFields() {
         firstNameField.setText("");
         lastNameField.setText("");
         streetField.setText("");
